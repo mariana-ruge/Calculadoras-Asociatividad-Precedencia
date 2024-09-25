@@ -1,13 +1,7 @@
-# Calculadora BISON - Precedencia de operadores invertida
+# Calculadora Básica BISON
 
 ## Descripción
 En este repositorio se encuentra el desarrollo de una cálculadora básica implementada en los lenguajes Flex y Bison. La cálculadora realiza las 4 operaciones matemáticas básicas (suma, resta, multiplicación y división), además se manejan varios casos de error que puedan ser generados por entradas del usuario. 
-
-**Importante, esta cálculadora tiene la precedencia de los operadores al revés, significa que leerá**: 
-
-	1. Suma y resta (-) (+)
-	2. Multiplicación y división (*) (/)
-	3. Potencias
 
 ## Uso - Instrucciones para correr el proyecto de forma local.
 
@@ -84,4 +78,3 @@ Con esto, ya están listas las herramientas para correr el proyecto.
 
 En la terminal se mostrará el título "Calculadora Simple" y se mostrará un puntero indicando que espera la entrada de la operación a realizar. Al dar "enter" se podrá ver el resultado.
 Para finalizar el programa se debe dar `ctrl + C`
-
