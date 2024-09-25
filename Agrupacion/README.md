@@ -1,21 +1,14 @@
-# Calculadora BISON - Precedencia de operadores invertida
-
-**Realizado por** 
-- Sebastián Cortés Briceño
-- Julian Esteban Rincón Rodriguez
-- Mariana Ruge Vargas
--  Andres Sebastian Urrego Amaya
+# Calculadora BISON - Precedencia de signos de agrupación invertida
 
 ## Descripción
 En este repositorio se encuentra el desarrollo de una cálculadora básica implementada en los lenguajes Flex y Bison. La cálculadora realiza las 4 operaciones matemáticas básicas (suma, resta, multiplicación y división), además se manejan varios casos de error que puedan ser generados por entradas del usuario. 
 
-**Importante, esta cálculadora tiene la precedencia de los operadores al revés, significa que leerá**: 
+**Importante, esta cálculadora tiene la precedencia de los signos de agrupación al revés, significa que leerá**: 
 
-	1. Suma y resta (-) (+)
-	2. Multiplicación y división (*) (/)
-	3. Potencias
+	1. Llaves {}
+	2. Corchetes []
+	3. Paréntesis ()
 
-## Uso - Instrucciones para correr el proyecto de forma local.
 
 ### Requisitos
 1 .**Tener GCC  (Compilador de C):**
@@ -66,44 +59,23 @@ En caso de no tenerlo instalado, por favor ejecuta en tu terminal.
 ```
 Con esto, ya están listas las herramientas para correr el proyecto.
 
-### Clonar el repositorio
-
-A continuación deberás clonar este repositorio a tu entorno local.
-
-1.  Navega hasta la ubicación donde vas a clonar el proyecto.
-```bash
-    cd  'UbicacionProyecto'
-```
-2.  Ejecuta el comando para clonar de git, de la siguiente forma.
-```bash
-    git clone https://github.com/mariana-ruge/Calculadoras-Asociatividad-Precendencia.git
-```
-3.  Una vez haya terminado, debes ubicarte en la carpeta, llamada 'Calculadora-BISON'
-```bash
-    cd 'BISON_Invertida'
-```
-
 ### Ejecuta el proyecto
 
 1.  Compila el proyecto, primero con BISON y después con C y Flex. De la siguiente forma.
 
 	1.1: Compila con bison
 	```bash
-		bison -d calc.y
+		bison -d calc_a.y
     ```
 
 	1.2: Compila con el compilador de c y flex
 
     ```bash
-		  gcc -o calc calc.tab.c lex.yy.c -ll -lm
+		  gcc -o calc calc_a.tab.c lex.yy.c -ll -lm
     ```
 
 2. Si la compilación se realizó sin errores, puedes correr el programa con el siguiente comando.
 
     ```
-	./calc
+	./calc_a
 	```
-
-En la terminal se mostrará el título "Calculadora Simple" y se mostrará un puntero indicando que espera la entrada de la operación a realizar. Al dar "enter" se podrá ver el resultado.
-Para finalizar el programa se debe dar `ctrl + C`
-
