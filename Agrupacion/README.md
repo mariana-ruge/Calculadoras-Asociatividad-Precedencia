@@ -65,17 +65,25 @@ Con esto, ya están listas las herramientas para correr el proyecto.
 
 	1.1: Compila con bison
 	```bash
-		bison -d calc_a.y
+		bison -d agrupacion.y
+    ```
+	Esto genera los archivos:
+	- agrupacion.tab.c
+	- agrupacion.tab.h
+
+	1.2 Compila con flex
+	```bash
+		flex agrupacion.l
     ```
 
 	1.2: Compila con el compilador de c y flex
 
     ```bash
-		  gcc -o calc calc_a.tab.c lex.yy.c -ll -lm
+		  gcc -o calc agrupacion.tab.c lex.yy.c -ll -lm
     ```
 
 2. Si la compilación se realizó sin errores, puedes correr el programa con el siguiente comando.
 
     ```
-	./calc_a
+	./agrupacion
 	```
